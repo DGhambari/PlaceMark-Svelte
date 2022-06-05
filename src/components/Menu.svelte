@@ -12,7 +12,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a id="dashboard" class="button" href="/#/dashboard"> Dashboard </a> 
+          <a id="dashboard" class="button" href="/dashboard"> Dashboard </a> 
           <a id="about" class="button" href="/#/about"> About </a> 
           <a id="map" class="button" href="/#/map"> Map </a>
           <a id="charts" class="button" href="/#/charts"> Charts </a>

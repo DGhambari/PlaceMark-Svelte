@@ -5,9 +5,9 @@
   import About from "./pages/About.svelte"
   import Dashboard from "./pages/Dashboard.svelte"
   import Placemark from "./pages/Placemark.svelte"
-  import Poi from "./pages/PointOfInterest.svelte"
-  import Charts from "./pages/Charts.svelte"
+  import PointOfInterest from "./pages/PointOfInterest.svelte"
   import Map from "./pages/Map.svelte";
+  import Charts from "./pages/Charts.svelte";
   import Router from "svelte-spa-router";
   import { PlacemarkService } from "./services/PlacemarkService";
   import { setContext } from "svelte";
@@ -20,12 +20,12 @@
     "/about": About,
     "/dashboard": Dashboard,
     "/placemark": Placemark,
-    "/charts": Charts,
     "/map": Map,
-    "/poi": Poi,
+    "/pointofinterest": PointOfInterest,
+    "/charts": Charts,
   }
 
-setContext("PlacemarkService", new PlacemarkService("https://placemark-hapi.herokuapp.com/"));
+setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
 
 </script>
 

@@ -2,10 +2,10 @@
   import {getContext, onMount} from 'svelte'
 
   const placemarkService = getContext("PlacemarkService");
-  export let pointOfInterestList = [];
+  export let placemarkList = [];
 
   onMount(async () => {
-    pointOfInterestList = await placemarkService.getPointsOfInterest();
+    placemarkList = await placemarkService.getPlacemarks();
   });
 
 </script>
@@ -17,10 +17,12 @@
       <th>Point of Interest</th>
       <th>Latitude</th>
       <th>Longitude</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    {#each pointOfInterestList as poi}
+    {#each placemark.pointOfInterests as poi}
       <tr>
         <td>
           {poi.category}
@@ -34,7 +36,7 @@
         <td>
           {poi.lng}
         </td>
-        <!-- <td>
+        <td>
           <a href="/pointOfInterest/{{../placemark._id}}/editpointOfInterest/{{_id}}" class="ui icon button">
             <i class="fas fa-edit"></i>
           </a>
@@ -43,8 +45,8 @@
           <a href="/placemark/{{../placemark._id}}/deletepointOfInterest/{{_id}}" class="ui icon button">
             <i class="fas fa-trash"></i>
           </a>
-        </td> -->
+        </td>
       </tr>
-    {/each}
+    {{/each}}
   </tbody>
 </table>

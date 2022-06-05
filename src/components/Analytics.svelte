@@ -1,9 +1,9 @@
 <script>
 
     // Need to import the lat and lon of the points of interest and pass them as variables.
-    import dotenv from "dotenv";
+    // import dotenv from "dotenv";
 
-    // const api_key = process.env.openweather;
+    // const openweather_api_key = process.env.openweather;
     // const lat = 0;
     // const lon = 0;
 

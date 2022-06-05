@@ -1,9 +1,20 @@
-<script>
-import Menu from "../components/Menu.svelte";
-import ListPointsOfInterest from "../components/ListPointsOfInterest.svelte";
-import AddPointOfInterest from "../components/AddPointOfInterest.svelte";
-</script>
+<WelcomeMenu/>
 
-<Menu/>
-<ListPointsOfInterest/>
-<AddPointOfInterest/>
+<form class="box"  action="/pointOfInterest/{placemark._id}/updatepointOfInterest/{pointOfInterest._id}" method="POST">
+  <label>Update Point of Interest Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" name="title", value="{pointOfInterest.title}">
+      </div>
+      <div class="field">
+        <input class="input" type="text" name="artist" value="{pointOfInterest.artist}">
+      </div>
+      <div class="field">
+        <input class="input" type="text"  name="duration" value="{pointOfInterest.duration}">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Update Point of Interest</button>
+</form>
+

@@ -1,9 +1,11 @@
 <script>
-  import Menu from "../components/Menu.svelte";
-  import ListPlacemarks from "../components/ListPlacemarks.svelte";
-  import AddPlacemark from "../components/AddPlacemark.svelte";
-  </script>
-  
-  <Menu/>
-  <ListPlacemarks/>
-  <AddPlacemark/>
+  import WelcomeMenu from "../components/WelcomeMenu.svelte";
+  /*
+  import ListPlacemarks from "../components/ListPointsOfInterest.svelte";
+  import AddPointOfInterest from "../components/AddPointOfInterest.svelte";
+  import { MapBox } from "../components/AddPointOfInterest.svelte";
+  */
+</script>
+
+<WelcomeMenu/>
+

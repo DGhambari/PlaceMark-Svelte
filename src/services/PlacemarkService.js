@@ -68,6 +68,7 @@ export class PlacemarkService {
     }
   }
 
+
   async addPointOfInterest(pointOfInterest) {
     try {
       const response = await axios.post(`${this.baseUrl }/api/placemarks/`);
