@@ -25,7 +25,7 @@
     "/poi": Poi,
   }
 
-setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
+setContext("PlacemarkService", new PlacemarkService("https://placemark-hapi.herokuapp.com/"));
 
 </script>
 
